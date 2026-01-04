@@ -8,18 +8,32 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
+interface NavObj {
+  name: string;
+  href: string;
+}
+
+const navigation: Array<NavObj> = [
+  {
+    name: "github",
+    href: "https://github.com/rainiersarmiento",
+  },
+  {
+    name: "linkedin",
+    href: "https://www.linkedin.com/in/rainier-sarmiento/",
+  },
+];
+
 const Navbar = () => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <a href="Home">Home</a>
+          <NavigationMenuLink href="#home">Home</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           {/* <a href="about">About</a> */}
-          <NavigationMenuLink>
-            <a href="github">About</a>
-          </NavigationMenuLink>
+          <NavigationMenuLink href="about">About</NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>

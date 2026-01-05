@@ -1,7 +1,9 @@
 import { ComponentExample } from "@/components/component-example";
+import { Toaster } from "./components/ui/sonner";
 import Navbar from "./components/Navbar";
 import Landing from "./sections/Landing";
 import Contact from "./sections/Contact";
+
 export function App() {
   return (
     <>
@@ -9,6 +11,7 @@ export function App() {
       <Landing />
       <Contact />
       <ComponentExample />
+      <Toaster />
     </>
   );
 }

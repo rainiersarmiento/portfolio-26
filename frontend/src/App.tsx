@@ -3,6 +3,7 @@ import { Toaster } from "./components/ui/sonner";
 import Navbar from "./components/Navbar";
 import Landing from "./sections/Landing";
 import Contact from "./sections/Contact";
+import About from "./sections/About";
 
 export function App() {
   return (
@@ -10,6 +11,7 @@ export function App() {
       <Toaster position="top-center" />
       <Navbar />
       <Landing />
+      <About />
       <Contact />
       <ComponentExample />
     </>

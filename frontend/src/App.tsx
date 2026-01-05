@@ -1,11 +1,12 @@
 import { ComponentExample } from "@/components/component-example";
 import Navbar from "./components/Navbar";
-import Avatar from "./components/Avatar";
+import Landing from "./sections/Landing";
+
 export function App() {
   return (
     <>
       <Navbar />
-      <Avatar />
+      <Landing />
       <ComponentExample />
     </>
   );

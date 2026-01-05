@@ -4,11 +4,20 @@ import { Button } from "@/components/ui/button";
 const Contact = () => {
   const buttonHandler = async () => {
     try {
-      toast.success("Email submit! I hope to be in contact soon!");
-    } catch (err) {
-      if (typeof err === "string") {
-        toast.error(err);
-      }
+      toast.promise<{ name: string }>(
+        () =>
+          new Promise((resolve) =>
+            setTimeout(() => resolve({ name: "Email" }), 1500)
+          ),
+
+        {
+          loading: "Loading...",
+          success: (data) => `${data.name} has been created`,
+          error: "Error",
+        }
+      );
+    } catch (error) {
+      toast.error(`Email unable to send, ${error}`);
     }
   };
   return (

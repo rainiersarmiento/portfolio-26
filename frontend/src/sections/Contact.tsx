@@ -23,6 +23,7 @@ const Contact = () => {
   return (
     <section>
       <h1>Contact Me</h1>
+      {/* Form Here */}
       <Button onClick={buttonHandler}>Click Me</Button>
     </section>
   );

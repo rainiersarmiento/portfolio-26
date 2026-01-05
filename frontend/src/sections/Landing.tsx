@@ -10,7 +10,7 @@ const Landing = () => {
   );
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    const timer = setTimeout(() => setIndex(index === 0 ? 1 : 0), 2000);
+    const timer = setTimeout(() => setIndex(index === 0 ? 1 : 0), 2500);
     return () => clearTimeout(timer);
   }, [intro, index]);
   return (

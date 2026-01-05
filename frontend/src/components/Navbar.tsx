@@ -1,7 +1,6 @@
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -13,7 +12,7 @@ interface NavObj {
   href: string;
 }
 
-const navigation: Array<NavObj> = [
+const links: Array<NavObj> = [
   {
     name: "github",
     href: "https://github.com/rainiersarmiento",
@@ -39,10 +38,14 @@ const Navbar = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Links</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <NavigationMenuLink>LinkedIn</NavigationMenuLink>
+            <NavigationMenuLink href={links[0].href} target="_blank">
+              LinkedIn
+            </NavigationMenuLink>
           </NavigationMenuContent>
           <NavigationMenuContent>
-            <NavigationMenuLink>Github</NavigationMenuLink>
+            <NavigationMenuLink href={links[1].href} target="_blank">
+              Github
+            </NavigationMenuLink>
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>

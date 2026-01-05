@@ -14,13 +14,11 @@ const Landing = () => {
     return () => clearTimeout(timer);
   }, [intro, index]);
   return (
-    <>
-      <div>
-        <Avatar />
-        <h1>Rainier Sarmiento, </h1>
-        <h2>{intro[index]}</h2>
-      </div>
-    </>
+    <section id="landing">
+      <Avatar />
+      <h1>Rainier Sarmiento, </h1>
+      <h2>{intro[index]}</h2>
+    </section>
   );
 };
 export default Landing;

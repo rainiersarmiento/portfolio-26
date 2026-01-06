@@ -12,17 +12,15 @@ import {
 import {
   Field,
   FieldDescription,
-  FieldError,
   FieldGroup,
   FieldLabel,
+  FieldLegend,
+  FieldSeparator,
+  FieldSet,
 } from "@/components/ui/field";
+
 import { Input } from "@/components/ui/input";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroupTextarea,
-} from "@/components/ui/input-group";
+import { Textarea } from "@/components/ui/textarea";
 
 const Contact = () => {
   const submitHandler = async (e: Event) => {
@@ -45,17 +43,39 @@ const Contact = () => {
     }
   };
   return (
-    <section>
+    <section className="w-full max-w-md">
       <h1>Contact Me</h1>
-      <Card className="">
-        <CardHeader>
-          <CardTitle>Send me an Email!</CardTitle>
-          <CardDescription>Contact Info</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <form id="form-email-input" onSubmit={() => submitHandler}></form>
-        </CardContent>
-      </Card>
+      <form onSubmit={() => submitHandler}>
+        <FieldGroup>
+          <FieldSet>
+            <FieldLegend>Email</FieldLegend>
+            <FieldDescription>
+              Send me an email and I will be in contact soon!
+            </FieldDescription>
+            <FieldSeparator />
+            <FieldGroup>
+              <Field>
+                <FieldLabel htmlFor="name">Name</FieldLabel>
+                <Input id="email" placeholder="Enter your email" required />
+              </Field>
+              <Field>
+                <FieldLabel htmlFor="email">Email</FieldLabel>
+                <Input id="email" placeholder="john@email.com" required />
+                <FieldSeparator />
+                <Field>
+                  <FieldLabel htmlFor="subject">Subject</FieldLabel>
+                  <Input id="subject" placeholder="Enter subject" />
+                </Field>
+                <Field>
+                  <FieldLabel htmlFor="body">Body</FieldLabel>
+                  {/* <Input id="body" placeholder="Enter body" /> */}
+                  <Textarea id="body" placeholder="Enter body" required />
+                </Field>
+              </Field>
+            </FieldGroup>
+          </FieldSet>
+        </FieldGroup>
+      </form>
       {/* Form Here */}
       <Button onClick={() => submitHandler}>Click Me</Button>
     </section>

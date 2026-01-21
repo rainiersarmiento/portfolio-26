@@ -25,7 +25,7 @@ const links: Array<NavObj> = [
 
 const Navbar = () => {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="sticky top-0 z-10 bg-white">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink href="#home">Home</NavigationMenuLink>

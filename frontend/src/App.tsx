@@ -12,9 +12,9 @@ export function App() {
     <>
       <SidebarProvider>
         <Toaster position="top-center" />
-        <AppSidebar />
         <main>
           <Navbar />
+          <AppSidebar />
           <SidebarTrigger />
           <Landing />
           <About />

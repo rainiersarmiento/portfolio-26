@@ -58,7 +58,7 @@ export function AppSidebar() {
     toast.success("Add button clicked");
   };
   return (
-    <Sidebar>
+    <Sidebar className="z-5">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
